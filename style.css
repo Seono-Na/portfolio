@@ -27,8 +27,12 @@
   --weight-bold: 700;
   --weight-semi-bold: 600;
   --weight-regular: 400;
+
   /* Size */
   --size-border-radius: 4px;
+
+  /* Animation */
+  --animation-duration: 300ms;
 }
 
 /* Universal tags */
@@ -52,7 +56,7 @@ ul {
   padding-left: 0;
 }
 
-button{
+button {
   background: transparent;
   cursor: pointer;
   border: none;
@@ -102,7 +106,7 @@ p {
   display: flex;
 }
 
-.logo{
+.logo {
   width: 28px;
   height: 28px;
   transform: translateY(5px);
@@ -120,45 +124,126 @@ p {
   border-radius: var(--size-border-radius);
 }
 
-.navbar__menu__item.active{
+.navbar__menu__item.active {
   border: 1px solid var(--color-white);
 }
 
-.navbar__menu__item:hover{
+.navbar__menu__item:hover {
   background-color: var(--color-dark-indigo);
   border-radius: var(--size-border-radius);
 }
 
 /* Home */
-#home{
+#home {
   background: url("imgs/home-background.png") center/cover no-repeat;
   padding: 40px;
   text-align: center;
 }
 
-.home__avatar{
+.home__avatar {
   width: 250px;
   height: 250px;
   border-radius: 50%;
   border: 2px solid var(--color-light-white);
 }
 
-.home__title{
-  color: var(--color-white);
-  text-shadow:  0px 2px var(--color-dark-grey);
-}
-.home__description{
-  color: var(--color-white);
-  text-shadow:  0px 1.5px var(--color-dark-grey);
+.home__title:hover {
+  color: var(--color-dark-indigo);
 }
 
-.home__contact{
+.home__description:hover {
+  color: var(--color-dark-grey);
+}
+
+.home__title {
   color: var(--color-white);
-  text-shadow:  0px 1.5px var(--color-dark-grey);
+  text-shadow: 0px 2px var(--color-dark-grey);
+  transition: all var(--animation-duration) linear;
+}
+
+.home__description {
+  color: var(--color-white);
+  text-shadow: 0px 1.5px var(--color-dark-grey);
+}
+
+.home__contact {
+  color: var(--color-white);
+  text-shadow: 0px 1.5px var(--color-dark-grey);
   font-size: var(--font-regular);
   font-weight: var(--weight-bold);
   margin: 24px;
   padding: 8px 12px;
   border: 2px solid var(--color-white);
   border-radius: 4px;
+}
+
+/* Section common */
+.section {
+  padding: 50px;
+  text-align: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* About */
+.about__majors {
+  display: flex;
+  justify-content: space-between;
+  margin: 80px 0;
+}
+
+.major__icon {
+  width: 170px;
+  height: 170px;
+  line-height: 170px;
+  font-size: 70px;
+  margin: auto;
+  border: 1px solid var(--color-indigo);
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+
+.major__icon i {
+  transition: all var(--animation-duration) ease;
+}
+
+.major__icon:hover i {
+  color: var(--color-pink);
+  transform: rotate(30deg);
+}
+
+.major__title,
+.major__description {
+  color: var(--color-dark-grey);
+}
+
+.major__description {
+  font-size: var(--font-regular);
+}
+
+.edu {
+  display: flex;
+  align-items: center;
+}
+
+.edu>img {
+  width: 58px;
+}
+
+.edu__description {
+  margin: 0 16px;
+  text-align: left;
+}
+
+.edu__name,
+.edu__period {
+  color: var(--color-light-grey);
+}
+
+.edu__name{
+  font-size: var(--font-small);
+}
+
+.edu__period{
+  font-size: var(--font-micro);
 }
