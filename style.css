@@ -52,6 +52,13 @@ ul {
   padding-left: 0;
 }
 
+button{
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
 /* Typography */
 h1 {
   font-size: var(--font-large);
@@ -95,6 +102,12 @@ p {
   display: flex;
 }
 
+.logo{
+  width: 28px;
+  height: 28px;
+  transform: translateY(5px);
+}
+
 .navbar__logo {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
@@ -114,4 +127,38 @@ p {
 .navbar__menu__item:hover{
   background-color: var(--color-dark-indigo);
   border-radius: var(--size-border-radius);
+}
+
+/* Home */
+#home{
+  background: url("imgs/home-background.png") center/cover no-repeat;
+  padding: 40px;
+  text-align: center;
+}
+
+.home__avatar{
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 2px solid var(--color-light-white);
+}
+
+.home__title{
+  color: var(--color-white);
+  text-shadow:  0px 2px var(--color-dark-grey);
+}
+.home__description{
+  color: var(--color-white);
+  text-shadow:  0px 1.5px var(--color-dark-grey);
+}
+
+.home__contact{
+  color: var(--color-white);
+  text-shadow:  0px 1.5px var(--color-dark-grey);
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  margin: 24px;
+  padding: 8px 12px;
+  border: 2px solid var(--color-white);
+  border-radius: 4px;
 }
