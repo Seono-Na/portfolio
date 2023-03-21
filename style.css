@@ -501,6 +501,6 @@ p {
 }
 
 .contact__links i:hover {
-  transform: scale(1.1) rotate(15deg);
+  transform: scale(1.2) rotate(360deg);
   color: var(--color-pink);
 }
