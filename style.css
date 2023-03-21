@@ -470,4 +470,9 @@ p {
 
 .testimonial__speech-bubble a {
   color: var(--color-pink);
+  transition: all var(--animation-duration) ease-in;
+}
+
+.testimonial__speech-bubble:hover a {
+  font-weight: var(--weight-bold);
 }
