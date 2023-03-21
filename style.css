@@ -374,7 +374,6 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  ;
   max-width: 1200px;
   margin: auto;
 }
@@ -384,7 +383,6 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  ;
   width: 280px;
   height: 250px;
   margin: 2px;
@@ -430,4 +428,46 @@ p {
   margin-left: 12px;
   margin-top: 8px;
   background-color: var(--color-dark-white);
+}
+
+/* Testimonial */
+#testimonials {
+  background-color: var(--color-light-white);
+}
+
+.testimonial {
+  margin: 40px;
+}
+
+.testimonial {
+  display: flex;
+  margin: 32px 0;
+}
+
+.testimonial__avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.home__avatar:nth-child(odd) {
+  margin-right: 40px;
+}
+
+.home__avatar:nth-child(eve) {
+  margin-left: 40px;
+}
+
+.testimonial__speech-bubble {
+  padding: 18px;
+  background-color: var(--color-white);
+  border-radius: var(--size-border-radius);
+}
+
+.testimonial__speech-bubble p {
+  color: var(--color-light-grey);
+}
+
+.testimonial__speech-bubble a {
+  color: var(--color-pink);
 }
