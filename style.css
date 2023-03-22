@@ -136,6 +136,15 @@ p {
   border-radius: var(--size-border-radius);
 }
 
+.navbar__toggle-btn {
+  position: absolute;
+  top: 20px;
+  right: 32px;
+  font-size: 24px;
+  color: var(--color-white);
+  display: none;
+}
+
 /* Home */
 #home {
   background: url("imgs/home-background.png") center/cover no-repeat;
@@ -449,11 +458,11 @@ p {
   border-radius: 50%;
 }
 
-.home__avatar:nth-child(odd) {
+.testimonial__avatar:nth-child(odd) {
   margin-right: 40px;
 }
 
-.home__avatar:nth-child(eve) {
+.testimonial__avatar:nth-child(even) {
   margin-left: 40px;
 }
 
@@ -503,4 +512,44 @@ p {
 .contact__links i:hover {
   transform: scale(1.2) rotate(360deg);
   color: var(--color-pink);
+}
+
+/* For below 768px screen width */
+@media screen and (max-width:768px) {
+  .navbar__toggle-btn {
+    display: block;
+  }
+
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar__menu {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    display: none;
+  }
+
+  .about__majors {
+    flex-direction: column;
+  }
+
+  .major{
+    margin-bottom: 38px;
+  }
+
+  .skillset {
+    flex-direction: column;
+  }
+
+  .project{
+    flex-grow: 1;
+  }
+
+  .testimonial__avatar{
+    width: 120px;
+    height: 120px;
+  }
 }
