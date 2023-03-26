@@ -522,6 +522,25 @@ p {
   color: var(--color-pink);
 }
 
+/* Scoll */
+.arrow-up {
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  width: 70px;
+  height: 70px;
+  font-size: 50px;
+  color: var(--color-orange);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 399ms ease-in;
+}
+
+.arrow-up.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
   .navbar__toggle-btn {
