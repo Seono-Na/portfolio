@@ -578,6 +578,10 @@ p {
     display: block;
   }
 
+  .section {
+    padding: 16px;
+  }
+
   .about__majors {
     flex-direction: column;
   }
