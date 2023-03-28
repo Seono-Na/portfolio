@@ -94,3 +94,14 @@ function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: "smooth" });
 }
+
+// const skillBar = document.querySelector(".skill__value");
+// const skillValue = skillBar.parentNode.previousElementSibling;
+// const skillPer = skillValue.getElementsByTagName("span")[1].innerText;
+
+// function skillFill() {
+//   skillValue.style.width = skillPer;
+//   console.log(skillBar);
+// }
+
+// skillValue.addEventListener("pointerin", skillFill);
