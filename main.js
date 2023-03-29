@@ -95,13 +95,17 @@ function scrollIntoView(selector) {
   scrollTo.scrollIntoView({ behavior: "smooth" });
 }
 
-// const skillBar = document.querySelector(".skill__value");
-// const skillValue = skillBar.parentNode.previousElementSibling;
-// const skillPer = skillValue.getElementsByTagName("span")[1].innerText;
+const skillBar = document.querySelector(".skill__value");
+const skillValue = skillBar.parentNode.previousElementSibling;
+const skillPer = skillValue.getElementsByTagName("span")[1].innerText;
 
-// function skillFill() {
-//   skillValue.style.width = skillPer;
-//   console.log(skillBar);
-// }
+function skillFill() {
+  skillValue.style.width = 0;
+  setTimeout(() => {
+    skillValue.style.width = skillPer;
+  }, 500);
 
-// skillValue.addEventListener("pointerin", skillFill);
+  console.log(skillBar);
+}
+
+skillValue.addEventListener("mouseEnter", skillFill);
