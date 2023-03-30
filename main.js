@@ -95,17 +95,51 @@ function scrollIntoView(selector) {
   scrollTo.scrollIntoView({ behavior: "smooth" });
 }
 
-const skillBar = document.querySelector(".skill__value");
-const skillValue = skillBar.parentNode.previousElementSibling;
-const skillPer = skillValue.getElementsByTagName("span")[1].innerText;
+// 1. 모든 섹션 요소들을 가지고 온다.
+// 2. IntersectionObserver를 이용해서 모든 섹션들을 관찰한다.
+// 3. 보여지는 섹션에 해당하는 메뉴 아이템을 활성화시킨다.
 
-function skillFill() {
-  skillValue.style.width = 0;
-  setTimeout(() => {
-    skillValue.style.width = skillPer;
-  }, 500);
+const sectionIds = [
+  "#home",
+  "#about",
+  "#skills",
+  "#work",
+  "#testimonials",
+  "#contact",
+];
+const sections = sectionIds.map((id) => document.querySelector(id));
+const navItems = sectionIds.map((id) =>
+  document.querySelector(`[data-link="${id}"]`)
+);
+console.log(sectionIds);
+console.log(navItems);
 
-  console.log(skillBar);
-}
+const observerOptions = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.3,
+};
 
-skillValue.addEventListener("mouseEnter", skillFill);
+const observerCallback = (entries, observer) => {
+  entries.forEach((entry) => {
+    console.log(entry.target);
+  });
+};
+
+const observer = new IntersectionObserver(observerCallback, observerOptions);
+sections.forEach((section) => observer.observe(section));
+
+// const skillBar = document.querySelector(".skill__value");
+// const skillValue = skillBar.parentNode.previousElementSibling;
+// const skillPer = skillValue.getElementsByTagName("span")[1].innerText;
+
+// function skillFill() {
+//   skillValue.style.width = 0;
+//   setTimeout(() => {
+//     skillValue.style.width = skillPer;
+//   }, 500);
+
+//   console.log(skillBar);
+// }
+
+// skillValue.addEventListener("mouseEnter", skillFill);

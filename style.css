@@ -137,6 +137,11 @@ p {
   border-radius: var(--size-border-radius);
 }
 
+.navbar__menu__item.active {
+  border-color: var(--color-white);
+  background-color: var(--color-dark-indigo);
+}
+
 .navbar__menu__item:hover {
   border-color: var(--color-white);
   background-color: var(--color-dark-indigo);
